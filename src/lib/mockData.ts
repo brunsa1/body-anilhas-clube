@@ -4,6 +4,7 @@
 export interface User {
   id: string;
   name: string;
+  email: string;
   cpf: string;
   phone: string;
   birthDate: string;
@@ -47,6 +48,7 @@ export interface UserCoupon {
 export const mockUser: User = {
   id: '1',
   name: 'João Silva',
+  email: 'joao.silva@email.com',
   cpf: '123.456.789-00',
   phone: '(11) 99999-8888',
   birthDate: '1990-05-15',
@@ -196,6 +198,7 @@ export const mockAllUsers: User[] = [
   {
     id: '2',
     name: 'Maria Santos',
+    email: 'maria.santos@email.com',
     cpf: '987.654.321-00',
     phone: '(11) 98888-7777',
     birthDate: '1985-08-22',
@@ -207,6 +210,7 @@ export const mockAllUsers: User[] = [
   {
     id: '3',
     name: 'Pedro Costa',
+    email: 'pedro.costa@email.com',
     cpf: '456.789.123-00',
     phone: '(21) 97777-6666',
     birthDate: '1995-12-10',
