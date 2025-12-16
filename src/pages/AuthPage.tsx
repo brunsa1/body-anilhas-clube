@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
-import { Phone, User, CreditCard, Calendar, ArrowLeft, Loader2 } from 'lucide-react';
+import { Phone, User, CreditCard, Calendar, ArrowLeft, Loader2, Mail } from 'lucide-react';
 import logoBody from '@/assets/logo-body.webp';
 
 type AuthMode = 'welcome' | 'login' | 'register';
@@ -16,6 +16,7 @@ export const AuthPage = () => {
   const [phone, setPhone] = useState('');
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     cpf: '',
     phone: '',
     birthDate: '',
@@ -57,10 +58,16 @@ export const AuthPage = () => {
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    const { name, cpf, phone, birthDate } = formData;
+    const { name, email, cpf, phone, birthDate } = formData;
 
-    if (!name || !cpf || !phone || !birthDate) {
+    if (!name || !email || !cpf || !phone || !birthDate) {
       toast.error('Preencha todos os campos');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error('Email inválido');
       return;
     }
 
@@ -70,7 +77,7 @@ export const AuthPage = () => {
     }
 
     setIsLoading(true);
-    const success = await register({ name, cpf, phone, birthDate });
+    const success = await register({ name, email, cpf, phone, birthDate });
     setIsLoading(false);
 
     if (success) {
@@ -203,6 +210,20 @@ export const AuthPage = () => {
                 placeholder="Seu nome completo"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="h-12"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email" className="flex items-center gap-2">
+                <Mail size={16} className="text-primary" />
+                Email
+              </Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="seu@email.com"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="h-12"
               />
             </div>
