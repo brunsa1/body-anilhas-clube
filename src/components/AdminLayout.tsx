@@ -16,6 +16,8 @@ const navItems = [
   { path: '/admin/clientes', icon: Users, label: 'Clientes' },
   { path: '/admin/cupons', icon: Ticket, label: 'Cupons' },
   { path: '/admin/anilhas', icon: Dumbbell, label: 'Ajuste de Anilhas' },
+  { path: '/admin/validar', icon: CheckCircle, label: 'Validar Cupons' },
+  { path: '/admin/configuracoes', icon: Settings, label: 'Configurações' },
 ];
 
 export const AdminLayout = ({ children, title }: AdminLayoutProps) => {

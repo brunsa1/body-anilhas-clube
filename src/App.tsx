@@ -47,6 +47,8 @@ const AppRoutes = () => (
     <Route path="/admin/clientes" element={<AdminRoute><AdminClientsPage /></AdminRoute>} />
     <Route path="/admin/cupons" element={<AdminRoute><AdminCouponsPage /></AdminRoute>} />
     <Route path="/admin/anilhas" element={<AdminRoute><AdminAnilhasPage /></AdminRoute>} />
+    <Route path="/admin/validar" element={<AdminRoute><AdminValidateCouponPage /></AdminRoute>} />
+    <Route path="/admin/configuracoes" element={<AdminRoute><AdminSettingsPage /></AdminRoute>} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 );
