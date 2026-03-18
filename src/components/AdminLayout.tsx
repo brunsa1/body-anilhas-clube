@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
-import { Users, Ticket, Dumbbell, LayoutDashboard, LogOut, Menu, X } from 'lucide-react';
+import { Users, Ticket, Dumbbell, LayoutDashboard, LogOut, Menu, X, CheckCircle, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logoBody from '@/assets/logo-body.webp';
 import { useState } from 'react';
@@ -16,6 +16,8 @@ const navItems = [
   { path: '/admin/clientes', icon: Users, label: 'Clientes' },
   { path: '/admin/cupons', icon: Ticket, label: 'Cupons' },
   { path: '/admin/anilhas', icon: Dumbbell, label: 'Ajuste de Anilhas' },
+  { path: '/admin/validar', icon: CheckCircle, label: 'Validar Cupons' },
+  { path: '/admin/configuracoes', icon: Settings, label: 'Configurações' },
 ];
 
 export const AdminLayout = ({ children, title }: AdminLayoutProps) => {

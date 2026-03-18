@@ -16,6 +16,8 @@ import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import AdminClientsPage from "./pages/admin/AdminClientsPage";
 import AdminCouponsPage from "./pages/admin/AdminCouponsPage";
 import AdminAnilhasPage from "./pages/admin/AdminAnilhasPage";
+import AdminValidateCouponPage from "./pages/admin/AdminValidateCouponPage";
+import AdminSettingsPage from "./pages/admin/AdminSettingsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +47,8 @@ const AppRoutes = () => (
     <Route path="/admin/clientes" element={<AdminRoute><AdminClientsPage /></AdminRoute>} />
     <Route path="/admin/cupons" element={<AdminRoute><AdminCouponsPage /></AdminRoute>} />
     <Route path="/admin/anilhas" element={<AdminRoute><AdminAnilhasPage /></AdminRoute>} />
+    <Route path="/admin/validar" element={<AdminRoute><AdminValidateCouponPage /></AdminRoute>} />
+    <Route path="/admin/configuracoes" element={<AdminRoute><AdminSettingsPage /></AdminRoute>} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 );
