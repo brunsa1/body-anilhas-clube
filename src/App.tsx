@@ -16,6 +16,8 @@ import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import AdminClientsPage from "./pages/admin/AdminClientsPage";
 import AdminCouponsPage from "./pages/admin/AdminCouponsPage";
 import AdminAnilhasPage from "./pages/admin/AdminAnilhasPage";
+import AdminValidateCouponPage from "./pages/admin/AdminValidateCouponPage";
+import AdminSettingsPage from "./pages/admin/AdminSettingsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
