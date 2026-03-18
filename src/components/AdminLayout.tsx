@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
-import { Users, Ticket, Dumbbell, LayoutDashboard, LogOut, Menu, X } from 'lucide-react';
+import { Users, Ticket, Dumbbell, LayoutDashboard, LogOut, Menu, X, CheckCircle, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import logoBody from '@/assets/logo-body.webp';
 import { useState } from 'react';
